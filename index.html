@@ -1,0 +1,571 @@
+<!DOCTYPE html><html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>আল‑জামি‘আহ আস‑সালাফিয়্যাহ, রাজশাহী</title>
+  <meta name="description" content="আল‑জামি‘আহ আস‑সালাফিয়্যাহ, ডাঙ্গীপাড়া, পবা, রাজশাহী – একটি আধুনিক ও প্রফেশনাল ইসলামি শিক্ষা প্রতিষ্ঠানের অফিসিয়াল ওয়েবসাইট টেমপ্লেট (বাংলা)।" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b1220;
+      --surface: #0f172a; /* slate-900 */
+      --card: #111827; /* gray-900 */
+      --text: #e5e7eb; /* gray-200 */
+      --muted: #9ca3af; /* gray-400 */
+      --brand: #22d3ee; /* cyan-400 */
+      --brand-2: #a78bfa; /* violet-400 */
+      --accent: #34d399; /* emerald-400 */
+      --warning: #f59e0b; /* amber-500 */
+      --danger: #ef4444; /* red-500 */
+      --ring: rgba(34,211,238,.35);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: "Noto Sans Bengali", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(167,139,250,.15), transparent 60%),
+                  radial-gradient(900px 500px at 20% -10%, rgba(34,211,238,.12), transparent 60%), var(--bg);
+      line-height:1.7;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1200px, 92%);margin:auto}
+    .btn{display:inline-flex;align-items:center;gap:.55rem;padding:.8rem 1.1rem;border-radius:999px;font-weight:600;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#0b1220;border:none;box-shadow:0 8px 24px rgba(34,211,238,.25);cursor:pointer}
+    .btn.outline{background:transparent;color:var(--text);border:1px solid rgba(229,231,235,.15);box-shadow:none}
+    .badge{display:inline-block;padding:.3rem .65rem;border:1px solid rgba(229,231,235,.2);border-radius:999px;font-size:.8rem;color:var(--muted)}
+    .glass{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);backdrop-filter: blur(8px);}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);border-radius:var(--radius)}
+    .grid{display:grid;gap:1.2rem}
+    .grid-2{grid-template-columns: repeat(2, minmax(0,1fr))}
+    .grid-3{grid-template-columns: repeat(3, minmax(0,1fr))}
+    .grid-4{grid-template-columns: repeat(4, minmax(0,1fr))}
+    @media (max-width: 960px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.7);backdrop-filter: blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.7rem}
+.logo{
+  width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-weight:800;
+  color:#0b1220;background:conic-gradient(from 180deg,var(--brand),var(--brand-2));
+  box-shadow:0 10px 20px rgba(167,139,250,.3)
+}
+nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+nav a{padding:.55rem .8rem;border-radius:10px;color:var(--muted)}
+nav a:hover, nav a.active{color:var(--text);background:rgba(255,255,255,.06)}
+.actions{display:flex;align-items:center;gap:.6rem}
+.menu-toggle{display:none}
+@media (max-width:960px){
+  nav ul{display:none}
+  nav.open ul{display:flex;flex-direction:column;position:absolute;left:4%;right:4%;top:66px;background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:.8rem}
+  .menu-toggle{display:inline-flex}
+}
+
+/* Hero */
+.hero{padding:64px 0 24px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:1.6rem;align-items:center}
+.hero h1{font-size:clamp(28px, 4vw, 44px);line-height:1.2;margin:.4rem 0 1rem}
+.sub{color:var(--muted)}
+.hero .panel{padding:1rem;border-radius:var(--radius)}
+.shape{position:relative;overflow:hidden;border-radius:var(--radius);}
+.shape::after{content:"";position:absolute;inset:-30% -20%;background:radial-gradient(600px 300px at 20% 10%, rgba(34,211,238,.2), transparent 60%), radial-gradient(600px 300px at 80% 80%, rgba(167,139,250,.18), transparent 60%)}
+
+/* Notice Ticker */
+.ticker{position:relative;overflow:hidden;border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+.ticker .track{display:flex;gap:1.5rem;white-space:nowrap;animation:scroll 22s linear infinite;padding:.7rem 1rem}
+.ticker a{color:var(--text)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* Section */
+section{padding:54px 0}
+.title{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.title h2{font-size:clamp(22px,3vw,32px);margin:0}
+.title p{margin:0;color:var(--muted)}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.stat{padding:18px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02))}
+.stat .num{font-weight:800;font-size:clamp(22px,3.2vw,34px)}
+.stat .lbl{color:var(--muted)}
+@media (max-width:960px){.stats{grid-template-columns:1fr 1fr}}
+
+/* Cards */
+.card .content{padding:18px}
+.card .head{padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:.6rem}
+.icon{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(180deg,rgba(34,211,238,.18),rgba(34,211,238,.05));border:1px solid rgba(34,211,238,.25)}
+
+/* Timeline */
+.timeline{position:relative;padding-left:20px}
+.timeline::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(var(--brand),var(--brand-2))}
+.timeline .item{position:relative;margin:0 0 14px 0;padding-left:12px}
+.timeline .item::before{content:"";position:absolute;left:-3px;top:.45rem;width:10px;height:10px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 3px rgba(34,211,238,.25)}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+.gallery img{aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.08)}
+@media (max-width:960px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+/* Form */
+.form{display:grid;gap:.8rem}
+.field{display:grid}
+.field label{font-weight:600;margin-bottom:.25rem}
+.field input,.field select,.field textarea{background:#0c1629;border:1px solid rgba(255,255,255,.1);padding:.75rem .9rem;border-radius:12px;color:var(--text)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;box-shadow:0 0 0 4px var(--ring)}
+
+/* Footer */
+footer{margin-top:48px;padding:36px 0;border-top:1px solid rgba(255,255,255,.06);background:rgba(12,18,32,.6)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:1rem}
+.footer-grid h4{margin:0 0 .6rem 0}
+.muted{color:var(--muted)}
+.credit{border-top:1px dashed rgba(255,255,255,.08);margin-top:20px;padding-top:14px;color:var(--muted);font-size:.9rem}
+@media (max-width:960px){.footer-grid{grid-template-columns:1fr}}
+
+/* Reveal on scroll */
+.reveal{opacity:0;transform:translateY(16px);transition:.7s ease}
+.reveal.show{opacity:1;transform:none}
+
+/* Light mode toggle */
+.light body{}
+.toggle{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);padding:.5rem .7rem;border-radius:12px}
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-label="লোগো">JS</div>
+        <div>
+          <strong style="display:block;line-height:1">আল‑জামি‘আহ আস‑সালাফিয়্যাহ</strong>
+          <span class="muted" style="font-size:.9rem">ডাঙ্গীপাড়া, পবা, রাজশাহী</span>
+        </div>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a href="#home" class="active">হোম</a></li>
+          <li><a href="#about">পরিচিতি</a></li>
+          <li><a href="#programs">শিক্ষাক্রম</a></li>
+          <li><a href="#admission">ভর্তি</a></li>
+          <li><a href="#notice">নোটিশ</a></li>
+          <li><a href="#contact">যোগাযোগ</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button class="toggle" id="modeBtn" title="ডার্ক/লাইট">🌓</button>
+        <a class="btn outline" href="#donate">দানের সুযোগ</a>
+        <button class="btn menu-toggle" id="menuBtn" aria-label="মেনু">☰</button>
+      </div>
+    </div>
+  </header>  <!-- Hero -->  <section class="hero" id="home">
+    <div class="container wrap">
+      <div class="panel">
+        <span class="badge">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ</span>
+        <h1>কুরআন‑সুন্নাহর আলোকে নৈতিক ও আধুনিক শিক্ষার সমন্বিত দীক্ষাকেন্দ্র</h1>
+        <p class="sub">আল‑জামি‘আহ আস‑সালাফিয়্যাহ (রাজশাহী) — শিশু থেকে কুল্লিয়্যাহ পর্যন্ত সুসংগঠিত পাঠ্যক্রম, মানসম্পন্ন শিক্ষক‑মন্ডলী, হিফজ, তাকমীল, আরবি ভাষা ও সাধারণ শিক্ষার সমন্বয়ে গঠিত একটি নির্ভরযোগ্য প্রতিষ্ঠান।</p>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:10px">
+          <a href="#admission" class="btn">এখনই ভর্তি হোন</a>
+          <a href="#about" class="btn outline">আরও জানুন</a>
+        </div>
+        <div style="margin-top:16px" class="stats reveal">
+          <div class="stat">
+            <div class="num" data-count="1700">0</div>
+            <div class="lbl">বালক শিক্ষার্থী</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-count="900">0</div>
+            <div class="lbl">বালিকা শিক্ষার্থী</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-count="2016">0</div>
+            <div class="lbl">প্রতিষ্ঠা সাল</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-count="8">0</div>
+            <div class="lbl">বিভাগ/শাখা</div>
+          </div>
+        </div>
+      </div>
+      <div class="shape card" aria-hidden="true">
+        <img src="https://i.postimg.cc/5t88WK5m/article-image-1728108821.jpg" alt="ক্যাম্পাস কভার ছবি (প্লেসহোল্ডার)" />
+      </div>
+    </div>
+    <div class="container" style="margin-top:14px">
+      <div class="ticker glass">
+        <div class="track" id="tickerTrack">
+          <span>📢 ভর্তি চলছে ২০২5 সেশন | </span>
+          <a href="#notice">ভর্তি পরীক্ষা ১৫ সেপ্টেম্বর ২০২5 — বিস্তারিত দেখুন</a>
+          <span> | ফলাফলের রিভিউ আবেদন শেষ তারিখ ৩০ সেপ্টেম্বর ২০২5</span>
+          <span> | মিলাদ ও দোয়া মাহফিল ১২ রবিউল আউয়াল</span>
+          <span> | বার্ষিক কুরআন তেলাওয়াত প্রতিযোগিতা — রেজিস্ট্রেশন খোলা</span>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- About -->  <section id="about" class="reveal">
+    <div class="container">
+      <div class="title">
+        <h2>প্রতিষ্ঠানের পরিচিতি</h2>
+        <p>কুরআন ও সহীহ সুন্নাহর নির্ভরযোগ্য শিক্ষাকেন্দ্র</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="head"><div class="icon">🏫</div><strong>আমাদের লক্ষ্য</strong></div>
+          <div class="content">
+            <p>সালাফে সালেহীনের আদর্শে আদর্শবান প্রজন্ম গড়ে তোলা—যারা দ্বীনি জ্ঞান, নৈতিকতা এবং সমকালীন দক্ষতায় সমৃদ্ধ। কুরআন‑সুন্নাহর বিশুদ্ধ আকীদা মজবুতকরণ এবং সমাজে কল্যাণমুখী নেতৃত্ব বিকাশ আমাদের মূল আকাঙ্ক্ষা।</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head"><div class="icon">📍</div><strong>অবস্থান</strong></div>
+          <div class="content">
+            <p>ডাঙ্গীপাড়া, পবা, রাজশাহী। নওদাপাড়া (আমচত্বর) হতে প্রায় ২ কিমি পূর্বে; শাহ মখদুম থানাধীন, পবা পোস্ট অফিস এলাকায় অবস্থিত।</p>
+            <p class="muted">গুগল ম্যাপ/লোকেশন এমবেডের জায়গা নিচে দেওয়া আছে।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Programs -->  <section id="programs" class="reveal">
+    <div class="container">
+      <div class="title">
+        <h2>শিক্ষাক্রম ও বিভাগসমূহ</h2>
+        <p>হিফজ, তাকমীল, আরবি ভাষা, দাওয়াহ, সাধারণ শিক্ষা সমন্বয়</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="head"><div class="icon">📖</div><strong>হিফজুল কুরআন</strong></div>
+          <div class="content">
+            <p>তাজউইদ‑সহ কুরআন হিফজ, নিয়মিত মুরاجা’আ, ক্বিরাআত প্রতিযোগিতা। মেধাভিত্তিক বৃত্তির ব্যবস্থা।</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head"><div class="icon">🎓</div><strong>তাকমীল (আলিমিয়া)</strong></div>
+          <div class="content">
+            <p>হাদীস, ফিকহ, উসূল, তফসীর, আরবি সাহিত্য—সমকালীন গবেষণাভিত্তিক পাঠ্যক্রম।</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head"><div class="icon">🗣️</div><strong>আরবি ভাষা ও দাওয়াহ</strong></div>
+          <div class="content">
+            <p>আরবি কথোপকথন, অনুবাদ, খুতবা‑দাওয়াহ প্রশিক্ষণ; আধুনিক উপস্থাপনা দক্ষতা।</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head"><div class="icon">💻</div><strong>আইসিটি ও সাধারণ শিক্ষা</strong></div>
+          <div class="content">
+            <p>বেসিক কম্পিউটার, টাইপিং, প্রেজেন্টেশন, গবেষণা‑টুলস; নির্বাচিত শ্রেণিতে সাধারণ শিক্ষার সিলেবাস।</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head"><div class="icon">🏕️</div><strong>সহশিক্ষা</strong></div>
+          <div class="content">
+            <p>বিতর্ক, তেলাওয়াত, নাশীদ, স্কাউটিং, ক্রীড়া—সালেমি ও সৃজনশীল পরিবেশে চরিত্র গঠন।</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head"><div class="icon">🛏️</div><strong>আবাসিক ব্যবস্থা</strong></div>
+          <div class="content">
+            <p>শৃঙ্খলাবদ্ধ হোস্টেল, স্বাস্থ্যকর খাবার, নিয়মিত তত্ত্বাবধান; নিরাপত্তা ও হিফাজত নিশ্চিত।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Admission -->  <section id="admission" class="reveal">
+    <div class="container">
+      <div class="title">
+        <h2>ভর্তি নির্দেশিকা (২০২5)</h2>
+        <p>অনলাইন আবেদন ফর্ম পূরণ করুন – কলব্যাক পাবেন</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="head"><div class="icon">🗂️</div><strong>যোগ্যতা ও প্রয়োজনীয়তা</strong></div>
+          <div class="content timeline">
+            <div class="item"><strong>আবেদনের সময়</strong>: ১ সেপ্টেম্বর – ৩০ সেপ্টেম্বর ২০২5</div>
+            <div class="item"><strong>প্রয়োজনীয় কাগজপত্র</strong>: সাম্প্রতিক ছবি, পুরাতন ইনস্টিটিউটের সনদ/টিসি, জন্ম নিবন্ধন অনুলিপি</div>
+            <div class="item"><strong>পরীক্ষা</strong>: কুরআন তিলাওয়াত/মৌখিক, প্রাথমিক লিখিত (প্রযোজ্য ক্ষেত্রে)</div>
+            <div class="item"><strong>ফলাফল</strong>: নোটিশ বোর্ড ও এসএমএস</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head"><div class="icon">📝</div><strong>অনলাইন আবেদন ফর্ম</strong></div>
+          <div class="content">
+            <form class="form" id="applyForm" onsubmit="return handleApply(event)">
+              <div class="field">
+                <label>ছাত্রের নাম</label>
+                <input required placeholder="পূর্ণ নাম লিখুন" />
+              </div>
+              <div class="field">
+                <label>অভিভাবকের মোবাইল</label>
+                <input type="tel" required placeholder="01XXXXXXXXX" />
+              </div>
+              <div class="field">
+                <label>পছন্দের বিভাগ</label>
+                <select required>
+                  <option value="">বাছাই করুন</option>
+                  <option>হিফজুল কুরআন</option>
+                  <option>তাকমীল (আলিমিয়া)</option>
+                  <option>আরবি ভাষা ও দাওয়াহ</option>
+                  <option>আইসিটি ও সাধারণ শিক্ষা</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>মন্তব্য (ঐচ্ছিক)</label>
+                <textarea rows="3" placeholder="অতিরিক্ত তথ্য"></textarea>
+              </div>
+              <button class="btn" type="submit">আবেদন পাঠান</button>
+              <small class="muted">ফর্মটি ডেমো; সাবমিট করলে শুধু প্রিভিউ দেখাবে।</small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Notices & Events -->  <section id="notice" class="reveal">
+    <div class="container">
+      <div class="title">
+        <h2>নোটিশ ও সাম্প্রতিক কার্যক্রম</h2>
+        <p>সবশেষ আপডেট ও গুরুত্বপূর্ণ ঘোষণা</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="head"><div class="icon">📌</div><strong>নোটিশ বোর্ড</strong></div>
+          <div class="content">
+            <ul style="margin:0;padding-left:1.1rem">
+              <li>ভর্তি পরীক্ষা (১৫ সেপ্টেম্বর ২০২5) – সিট প্ল্যান প্রকাশ</li>
+              <li>মহা-পরিষ্কার অভিযান: ৫ সেপ্টেম্বর ২০২5</li>
+              <li>মহিলা শাখা—অভিভাবক সভা: ২০ সেপ্টেম্বর ২০২5</li>
+              <li>মাসিক তেলাওয়াত প্রতিযোগিতা: ২৫ সেপ্টেম্বর ২০২5</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head"><div class="icon">🗓️</div><strong>ইভেন্টস</strong></div>
+          <div class="content timeline">
+            <div class="item"><strong>১২ রবিউল আউয়াল</strong>: সিরাতুন্নবী (সা.) মাহফিল</div>
+            <div class="item"><strong>শীতকালীন ক্যাম্প</strong>: সহশিক্ষা ও দাওয়াহ ট্রেনিং</div>
+            <div class="item"><strong>অভিভাবক কর্মশালা</strong>: নৈতিক শিক্ষা পরিবারে</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head"><div class="icon">👨‍🏫</div><strong>শিক্ষক পরিচিতি (স্যাম্পল)</strong></div>
+          <div class="content">
+            <div class="grid" style="grid-template-columns:56px 1fr;align-items:center">
+              <img style="width:56px;height:56px;border-radius:999px;border:1px solid rgba(255,255,255,.12);object-fit:cover" src="https://i.postimg.cc/2SSzD149/images-1.jpg" alt="শিক্ষক" />
+              <div>
+                <strong>আব্দুল্লাহ বিন আব্দুর রাজ্জাক</strong>
+                <div class="muted">উস্তাদ, হাদীস বিভাগ</div>
+              </div>
+            </div>
+            <div class="grid" style="grid-template-columns:56px 1fr;align-items:center;margin-top:10px">
+              <img style="width:56px;height:56px;border-radius:999px;border:1px solid rgba(255,255,255,.12);object-fit:cover" src="https://i.postimg.cc/Y9Y73YH0/final.jpg" alt="শিক্ষক" />
+              <div>
+                <strong>আব্দুর রাজ্জাক বিন ইউসুফ</strong>
+                <div class="muted">প্রতিষ্ঠাতা আল-জামিয়া সালাফিয়া</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Gallery -->  <section class="reveal">
+    <div class="container">
+      <div class="title">
+        <h2>গ্যালারি</h2>
+        <p>ক্যাম্পাসের কিছু ঝলক</p>
+      </div>
+      <div class="gallery">
+        <img src="https://i.postimg.cc/PqBhYK00/download.jpg" alt="ক্লাসরুম" />
+        <img src="https://i.postimg.cc/0yX929nk/download-1.jpg" alt="স্টাডি" />
+        <img src="https://i.postimg.cc/d07whgN8/images.jpg" alt="লাইব্রেরি" />
+        <img src="https://i.postimg.cc/2SSzD149/images-1.jpg" alt="টিমওয়ার্ক" />
+      </div>
+    </div>
+  </section>  <!-- Donate CTA -->  <section id="donate" class="reveal">
+    <div class="container card" style="padding:22px">
+      <div class="grid grid-2" style="align-items:center">
+        <div>
+          <h2 style="margin:.2rem 0 0">দানের সুযোগ ও ওয়াক্ফ</h2>
+          <p class="muted">মসজিদ‑মাদ্রাসার উন্নয়নে আপনার সদaka‑e‑jariyah। ব্যাংক/বিকাশ/নগদ নম্বর যুক্ত করুন।</p>
+          <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:8px">
+            <a class="btn">বিকাশ: 01XXXXXXXXX</a>
+            <a class="btn outline">ব্যাংক একাউন্ট তথ্য</a>
+          </div>
+        </div>
+        <div class="shape">
+          <img src="https://i.postimg.cc/CLZBV6Sf/images-3.jpg" alt="দান" />
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Contact -->  <section id="contact" class="reveal">
+    <div class="container">
+      <div class="title">
+        <h2>যোগাযোগ</h2>
+        <p>প্রশ্ন থাকলে নির্দ্বিধায় বার্তা পাঠান</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="head"><div class="icon">☎️</div><strong>ফোন ও ঠিকানা</strong></div>
+          <div class="content">
+            <p><strong>ঠিকানা:</strong> ডাঙ্গীপাড়া, পবা, রাজশাহী</p>
+            <p><strong>ফোন (অফিস):</strong> 0XXXXXXXXXX</p>
+            <p><strong>ইমেইল:</strong> info@example.com</p>
+            <p class="muted">অফিস সময়: শনি–বৃহস্পতি, সকাল ৯টা – বিকাল ৪টা</p>
+            <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08)">
+              <!-- Google Map Embed placeholder -->
+              <iframe title="গুগল ম্যাপ" src="https://maps.google.com/maps?q=Rajshahi&t=&z=12&ie=UTF8&iwloc=&output=embed" style="width:100%;height:240px;border:0"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head"><div class="icon">✉️</div><strong>বার্তা পাঠান</strong></div>
+          <div class="content">
+            <form class="form" id="contactForm" onsubmit="return handleContact(event)">
+              <div class="field">
+                <label>আপনার নাম</label>
+                <input required placeholder="পূর্ণ নাম" />
+              </div>
+              <div class="field">
+                <label>মোবাইল/ইমেইল</label>
+                <input required placeholder="মোবাইল বা ইমেইল" />
+              </div>
+              <div class="field">
+                <label>বার্তা</label>
+                <textarea rows="4" required placeholder="আপনার বার্তা লিখুন"></textarea>
+              </div>
+              <button class="btn" type="submit">পাঠান</button>
+              <small class="muted">এই ফর্ম ডেমো; সাবমিট করলে কেবল প্রিভিউ দেখায়।</small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Footer -->  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom:.6rem">
+            <div class="logo">JS</div>
+            <div>
+              <strong style="display:block">আল‑জামি‘আহ আস‑সালাফিয়্যাহ</strong>
+              <span class="muted">ডাঙ্গীপাড়া, পবা, রাজশাহী</span>
+            </div>
+          </div>
+          <p class="muted">কুরআন‑সুন্নাহর বিশুদ্ধ শিক্ষার ধারক‑বাহক একটি প্রতিষ্ঠান। নৈতিকতা, জ্ঞান ও দক্ষতার সমন্বয়ে আদর্শ নাগরিক গড়ে তোলা আমাদের অঙ্গীকার।</p>
+        </div>
+        <div>
+          <h4>লিংক</h4>
+          <ul style="list-style:none;margin:0;padding:0;display:grid;gap:.35rem">
+            <li><a href="#about">পরিচিতি</a></li>
+            <li><a href="#programs">শিক্ষাক্রম</a></li>
+            <li><a href="#admission">ভর্তি</a></li>
+            <li><a href="#notice">নোটিশ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>সহায়তা</h4>
+          <ul style="list-style:none;margin:0;padding:0;display:grid;gap:.35rem">
+            <li><a href="#contact">যোগাযোগ</a></li>
+            <li><a href="#donate">দানের তথ্য</a></li>
+            <li><a href="#">প্রাইভেসি</a></li>
+            <li><a href="#">শর্তাবলি</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>নিউজলেটার</h4>
+          <p class="muted">আপডেট পেতে ইমেইল দিন</p>
+          <form class="form" onsubmit="event.preventDefault();alert('ধন্যবাদ! (ডেমো)')">
+            <input placeholder="your@email.com" style="margin-bottom:.6rem" />
+            <button class="btn" type="submit">সাবস্ক্রাইব</button>
+          </form>
+        </div>
+      </div>
+      <div class="credit">© <span id="year"></span> আল‑জামি‘আহ আস‑সালাফিয়্যাহ, রাজশাহী — সর্বস্বত্ব সংরক্ষিত।</div>
+    </div>
+  </footer>  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const nav = document.getElementById('nav');
+    menuBtn?.addEventListener('click', () => nav.classList.toggle('open'));
+
+    // Active link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a');
+    const onScroll = () => {
+      let current = 'home';
+      sections.forEach(s => {
+        const top = window.scrollY;
+        const offset = s.offsetTop - 120;
+        if(top >= offset) current = s.getAttribute('id');
+      });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    };
+    window.addEventListener('scroll', onScroll);
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
+    },{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Counter animation
+    const cntrs = document.querySelectorAll('.num');
+    const io2 = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const el = e.target; const target = +el.dataset.count; let cur = 0; const step = Math.max(1, Math.floor(target/60));
+          const intv = setInterval(()=>{ cur += step; if(cur >= target){ cur = target; clearInterval(intv);} el.textContent = cur; }, 20);
+          io2.unobserve(el);
+        }
+      });
+    },{threshold:.6});
+    cntrs.forEach(el=>io2.observe(el));
+
+    // Demo forms
+    function handleApply(e){
+      e.preventDefault();
+      alert('আবেদন গ্রহণ করা হয়েছে! (ডেমো)');
+      return false;
+    }
+    function handleContact(e){
+      e.preventDefault();
+      alert('আপনার বার্তা পৌঁছেছে! (ডেমো)');
+      return false;
+    }
+
+    // Dark/Light mode toggle (with localStorage)
+    const modeBtn = document.getElementById('modeBtn');
+    const applyTheme = (m) => {
+      if(m==='light'){
+        document.body.style.background = '#f7f7fb';
+        document.body.style.color = '#0b1220';
+        document.querySelectorAll('.card,.glass,.stat').forEach(el=>{
+          el.style.background = 'linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.01))';
+          el.style.borderColor = 'rgba(0,0,0,.08)';
+        });
+      } else {
+        document.body.removeAttribute('style');
+        document.querySelectorAll('.card,.glass,.stat').forEach(el=>{
+          el.style.background = '';
+          el.style.borderColor = '';
+        });
+      }
+    };
+    const saved = localStorage.getItem('theme');
+    if(saved) applyTheme(saved);
+    modeBtn?.addEventListener('click', ()=>{
+      const next = (localStorage.getItem('theme')==='light') ? 'dark':'light';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+
+    // Duplicate ticker content for seamless loop
+    const track = document.getElementById('tickerTrack');
+    if(track){ track.innerHTML = track.innerHTML + ' \u00A0\u00A0\u00A0 ' + track.innerHTML; }
+  </script></body>
+</html>
